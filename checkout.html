@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Checkout | DEZUBBEX Marketplace</title>
+
+  <link rel="stylesheet" href="Checkout.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container navbar">
+
+      <a href="index.html" class="logo">
+        <h2>DEZUBBEX</h2>
+      </a>
+
+      <a href="index.html" class="back-btn">
+        ← Continue Shopping
+      </a>
+
+    </div>
+  </header>
+
+  <!-- CHECKOUT -->
+  <section class="checkout-section">
+
+    <div class="container checkout-container">
+
+      <!-- CUSTOMER DETAILS -->
+      <div class="checkout-form">
+
+        <h2>Billing Details</h2>
+
+        <form id="checkout-form" autocomplete="on">
+
+          <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              placeholder="Enter your full name"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Enter your phone number"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="state">State</label>
+            <input
+              type="text"
+              id="state"
+              name="state"
+              placeholder="Enter your state"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="city">City</label>
+            <input
+              type="text"
+              id="city"
+              name="city"
+              placeholder="Enter your city"
+              required
+            >
+          </div>
+          
+          
+          <div class="form-group">
+            <label>Address</label>
+            <textarea id="address" required></textarea>
+          </div>
+                   
+          <label style="display: block; margin: 15px 0;">
+            <input type="checkbox" id="different-shipping">
+            Ship to a different address?
+          </label>
+
+          <div id="shipping-section" style="display: none;">
+            <h3>Shipping Information</h3>
+            <div class="form-group">
+              <label>Full Name</label>
+              <input
+                type="text"
+                id="shipping-name">
+              </div>
+
+              <div class="form-group">
+                <label>Phone</label>
+                <input type="tel" id="ship-phone">
+              </div>
+
+            
+          <div class="form-group">
+            <label>Address</label>
+            <textarea
+              id="ship-address">
+            </textarea>
+          </div>
+          </div>
+
+
+          <div class="form-group">
+            <label for="payment">Payment Method</label>
+
+            <select id="payment" name="payment" required>
+              <option value="">Select Payment Method</option>
+              <option value="cod">Cash on Delivery</option>
+              <option value="transfer">Bank Transfer</option>
+              <option value="card">Debit/Credit Card</option>
+            </select>
+
+          </div>
+
+          <div class="form-group">
+            <label for="note">Order Note (Optional)</label>
+
+            <textarea
+              id="note"
+              name="note"
+              rows="3"
+              placeholder="Additional delivery information..."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="checkout-btn">
+            Place Order
+          </button>
+
+        </form>
+
+      </div>
+
+      <!-- ORDER SUMMARY -->
+      <div class="order-summary">
+
+        <h2>Your Order</h2>
+
+        <div id="checkout-items">
+          <!-- JS will insert products here -->
+        </div>
+
+        <hr>
+
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span id="subtotal">₦0.00</span>
+        </div>
+
+        <div class="summary-row">
+          <span>Shipping</span>
+          <span>Free</span>
+        </div>
+
+        <div class="summary-row total">
+          <span>Total</span>
+          <span id="total">₦0.00</span>
+        </div>
+
+      </div>
+
+    </div>
+    
+  </section>
+
+  <script src="checkout.js"></script>
+
+</body>
+</html>
