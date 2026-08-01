@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DEZUBBEX Marketplace | Everything You Need, All in One Place</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  
+  <!-- ================= HEADER ================= -->
+   <header class="header">
+    <div class="container navbar">
+      
+      <!-- Logo -->
+       <a href="index.html" class="logo">
+        DEZUBBEX
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="#categories">Categories</a>
+        <a href="#products">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      
+      <!-- Search -->
+      <div class="search-box">
+        <input
+          type="search"
+          id="search-input"
+          placeholder="Search products..."
+          aria-label="Search products"
+        >
+        
+        <button
+          id="search-btn"
+          type="button"
+          aria-label="Search"
+          title="Search"
+        >
+          🔍
+        </button>
+      </div>
+      
+      <!-- Cart -->
+       <a href="cart.html" class="cart-link" aria-label="Shopping Cart">
+        🛒
+        <span id="cart-count">0</span>
+       </a>
+       
+       <!-- Mobile Menu Button -->
+        <button
+        id="menu-btn"
+        class="menu-btn"
+        type="button"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        >
+        ☰
+       </button>
+      </div>
+    </header>
+    
+    <!-- ================= MOBILE NAVIGATION ================= -->
+     <nav class="mobile-nav" id="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="#categories">Categories</a>
+      <a href="#products">Shop</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    
+    <!-- ================= HERO SECTION ================= -->
+     <main>
+      <section class="hero">
+        <div class="container hero-content">
+          <div class="hero-text">
+            <span class="hero-tag">WELCOME TO DEZUBBEX</span>
+            <h1>
+               Everything You Need,<br>
+              All in One Place
+            </h1>
+            <p>
+              Shop thousands of quality products across Electronics,
+              Fashion, Beauty, Home & Living, Groceries,
+              Accessories and more at unbeatable prices.
+            </p>
+            
+            <a href="#products" class="hero-btn">
+              Shop Now
+            </a>
+          </div>
+          
+          <div class="hero-image">
+            <div class="hero-placeholder">
+              <img
+              src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80"
+              alt="Shopping Banner"
+              loading="lazy"
+              decoding="async"
+             >
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- ================= CATEGORIES ================= -->
+       <section class="categories" id="categories">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span>EXPLORE</span>
+          <h2>Shop By Category</h2>
+
+          <p>
+            Explore quality products across
+            electronics, fashion, and more.
+          </p>
+
+        </div>
+
+        <div class="category-grid">
+
+          <!-- FIXED categories to match FakeStore API -->
+          <button class="category-card" data-category="men's clothing" type="button">
+            <span class="category-icon">👕</span>
+            <h3>Men's Clothing</h3>
+          </button>
+
+          <button class="category-card" data-category="women's clothing" type="button">
+            <span class="category-icon">👗</span>
+            <h3>Women's Clothing</h3>
+          </button>
+
+          <button class="category-card" data-category="electronics" type="button">
+            <span class="category-icon">📱</span>
+            <h3>Electronics</h3>
+          </button>
+
+          <button class="category-card" data-category="jewelery" type="button">
+            <span class="category-icon">💎</span>
+            <h3>Jewelery</h3>
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================= PRODUCTS ================= -->
+    <section class="products" id="products">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span>OUR STORE</span>
+          <h2>Featured Products</h2>
+
+          <p>
+            Discover our most popular products
+            across all categories.
+          </p>
+
+        </div>
+
+        <div id="loading" class="loading">
+          Loading products...
+        </div>
+
+        <div id="error-message" class="error-message"></div>
+
+        <div class="product-grid" id="product-grid"></div>
+
+      </div>
+
+    </section>
+    
+    <!-- ================= ABOUT ================= -->
+    <section class="about" id="about">
+
+      <div class="container about-content">
+
+        <div class="about-image">
+          <img
+            src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=800&q=80"
+            alt="Online shopping experience"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="about-text">
+
+          <span>ABOUT DEZUBBEX</span>
+
+          <h2>Your Trusted Online Marketplace</h2>
+
+          <p>
+            We bring together quality products
+            into one convenient shopping destination.
+          </p>
+
+          <a href="#products" class="about-btn">
+            Explore Products
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="contact" id="contact">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span>GET IN TOUCH</span>
+          <h2>Contact DEZUBBEX</h2>
+
+        </div>
+
+        <form class="contact-form" id="contact-form">
+
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="contact-btn">
+            Send Message
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+
+    <div class="container footer-grid">
+
+      <!-- FIXED: removed stray "j" -->
+      <div class="footer-brand">
+
+        <a href="index.html" class="logo">
+          DEZUBBEX
+        </a>
+
+        <p>
+          Everything You Need, All in One Place.
+        </p>
+
+      </div>
+
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="#products">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>📧 <a href="mailto:deonlyzubby@gmail.com">Email</a></p>
+        <p>📞 <a href="tel:+2349153883565">Call</a></p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 DEZUBBEX. All Rights Reserved.</p>
+    </div>
+
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="app.js?v=3" defer></script>
+
+</body>
+</html>
